@@ -10,6 +10,4 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "Running migrations..."
-php artisan migrate:refresh --force
-
-php artisan db:seed --class=DatabaseSeeder --force
+php artisan migrate:fresh --seed --seeder=DatabaseSeeder --force
